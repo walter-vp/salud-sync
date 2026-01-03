@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing - Embudo de Ventas | SaludSync Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar__logo">
+            <span class="material-symbols-rounded sidebar__logo-icon">health_and_safety</span>
+            <h1 class="sidebar__title">SaludSync</h1>
+        </div>
+
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li class="sidebar__item">
+                    <a href="index.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">dashboard</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="agenda.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">calendar_month</span>
+                        <span>Agenda</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="patients.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">group</span>
+                        <span>Pacientes</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="cashbook.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">payments</span>
+                        <span>Caja</span>
+                    </a>
+                </li>
+                <li class="sidebar__item sidebar__item--active">
+                    <a href="marketing.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">campaign</span>
+                        <span>Marketing</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="productivity.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">bar_chart</span>
+                        <span>Productividad</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="inventory.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">inventory_2</span>
+                        <span>Inventario</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="laboratory.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">biotech</span>
+                        <span>Laboratorio</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        </ul>
+        </nav>
+
+        <div class="sidebar__footer">
+            <a href="#" class="sidebar__link">
+                <span class="material-symbols-rounded">settings</span>
+                <span>Configuración</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <h2 class="top-bar__title">Marketing</h2>
+
+            <div class="top-bar__actions">
+                <button class="btn btn--primary">
+                    <span class="material-symbols-rounded">add</span>
+                    Nuevo Lead
+                </button>
+                <div class="top-bar__profile">
+                    <img src="https://ui-avatars.com/api/?name=Dr+House&background=0D8ABC&color=fff" alt="Perfil"
+                        class="top-bar__avatar">
+                </div>
+            </div>
+        </header>
+
+        <!-- Vista de Embudo -->
+        <section class="section-content">
+
+            <!-- Submenús de Navegación -->
+            <nav class="sub-nav">
+                <a href="marketing.html" class="sub-nav__link">
+                    <span class="material-symbols-rounded">pie_chart</span>
+                    Segmentación
+                </a>
+                <a href="marketing-birthdays.html" class="sub-nav__link">
+                    <span class="material-symbols-rounded">cake</span>
+                    Cumpleaños
+                </a>
+                <a href="#" class="sub-nav__link">
+                    <span class="material-symbols-rounded">rocket_launch</span>
+                    Campañas
+                </a>
+                <a href="marketing-funnel.html" class="sub-nav__link sub-nav__link--active">
+                    <span class="material-symbols-rounded">filter_alt</span>
+                    Embudo de Ventas
+                </a>
+            </nav>
+
+            <!-- Filtros Funnel -->
+            <div class="filters-bar">
+                <div class="search-input">
+                    <span class="material-symbols-rounded">search</span>
+                    <input type="text" placeholder="Buscar lead...">
+                </div>
+                <div class="filters-actions">
+                    <button class="btn btn--outline">
+                        <span class="material-symbols-rounded">filter_list</span>
+                        Filtros
+                    </button>
+                </div>
+            </div>
+
+            <!-- Kanban Board -->
+            <div class="kanban-board">
+
+                <!-- Columna 1: Nuevos -->
+                <div class="kanban-column">
+                    <div class="kanban-column__header">
+                        <span class="kanban-column__title">Nuevos Leads</span>
+                        <span class="badge badge--neutral">3</span>
+                    </div>
+                    <div class="kanban-column__body">
+                        <!-- Card 1 -->
+                        <div class="kanban-card">
+                            <div class="kanban-card__header">
+                                <span class="badge badge--neutral">Facebook Ads</span>
+                                <button class="btn-icon-sm"><span
+                                        class="material-symbols-rounded">more_horiz</span></button>
+                            </div>
+                            <div class="kanban-card__content">
+                                <h4 class="kanban-card__name">Luisa Fernández</h4>
+                                <p class="kanban-card__info">Interés: Ortodoncia</p>
+                            </div>
+                            <div class="kanban-card__footer">
+                                <span class="kanban-card__time">Hace 2h</span>
+                                <div class="patient-avatar patient-avatar--purple"
+                                    style="width: 24px; height: 24px; font-size: 10px;">LF</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="kanban-card">
+                            <div class="kanban-card__header">
+                                <span class="badge badge--neutral">Web</span>
+                                <button class="btn-icon-sm"><span
+                                        class="material-symbols-rounded">more_horiz</span></button>
+                            </div>
+                            <div class="kanban-card__content">
+                                <h4 class="kanban-card__name">Pedro Castillo</h4>
+                                <p class="kanban-card__info">Interés: Blanqueamiento</p>
+                            </div>
+                            <div class="kanban-card__footer">
+                                <span class="kanban-card__time">Hace 5h</span>
+                                <div class="patient-avatar patient-avatar--green"
+                                    style="width: 24px; height: 24px; font-size: 10px;">PC</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="kanban-card">
+                            <div class="kanban-card__header">
+                                <span class="badge badge--neutral">Referido</span>
+                                <button class="btn-icon-sm"><span
+                                        class="material-symbols-rounded">more_horiz</span></button>
+                            </div>
+                            <div class="kanban-card__content">
+                                <h4 class="kanban-card__name">Maria Solis</h4>
+                                <p class="kanban-card__info">Interés: Estética</p>
+                            </div>
+                            <div class="kanban-card__footer">
+                                <span class="kanban-card__time">Ayer</span>
+                                <div class="patient-avatar" style="width: 24px; height: 24px; font-size: 10px;">MS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Contactados -->
+                <div class="kanban-column">
+                    <div class="kanban-column__header" style="border-top-color: #0066FF;">
+                        <span class="kanban-column__title">Contactados</span>
+                        <span class="badge badge--neutral">2</span>
+                    </div>
+                    <div class="kanban-column__body">
+                        <!-- Card -->
+                        <div class="kanban-card">
+                            <div class="kanban-card__header">
+                                <span class="badge badge--neutral">Instagram</span>
+                                <button class="btn-icon-sm"><span
+                                        class="material-symbols-rounded">more_horiz</span></button>
+                            </div>
+                            <div class="kanban-card__content">
+                                <h4 class="kanban-card__name">José Martinez</h4>
+                                <p class="kanban-card__info">Respondio mensaje</p>
+                            </div>
+                            <div class="kanban-card__footer">
+                                <span class="kanban-card__time">Hace 1d</span>
+                                <div class="patient-avatar patient-avatar--purple"
+                                    style="width: 24px; height: 24px; font-size: 10px;">JM</div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="kanban-card">
+                            <div class="kanban-card__header">
+                                <span class="badge badge--neutral">Llamada</span>
+                                <button class="btn-icon-sm"><span
+                                        class="material-symbols-rounded">more_horiz</span></button>
+                            </div>
+                            <div class="kanban-card__content">
+                                <h4 class="kanban-card__name">Rocio Durcal</h4>
+                                <p class="kanban-card__info">Pidió más info</p>
+                            </div>
+                            <div class="kanban-card__footer">
+                                <span class="kanban-card__time">Hace 2d</span>
+                                <div class="patient-avatar" style="width: 24px; height: 24px; font-size: 10px;">RD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 3: Cita Agendada -->
+                <div class="kanban-column">
+                    <div class="kanban-column__header" style="border-top-color: #00C896;">
+                        <span class="kanban-column__title">Cita Agendada</span>
+                        <span class="badge badge--neutral">1</span>
+                    </div>
+                    <div class="kanban-column__body">
+                        <!-- Card -->
+                        <div class="kanban-card kanban-card--highlight">
+                            <div class="kanban-card__header">
+                                <span class="badge badge--success">Confirmado</span>
+                                <button class="btn-icon-sm"><span
+                                        class="material-symbols-rounded">more_horiz</span></button>
+                            </div>
+                            <div class="kanban-card__content">
+                                <h4 class="kanban-card__name">Alberto Fujimori</h4>
+                                <p class="kanban-card__info">Cita: 04 Ene, 10:00</p>
+                            </div>
+                            <div class="kanban-card__footer">
+                                <span class="kanban-card__time">Próximo</span>
+                                <div class="patient-avatar patient-avatar--green"
+                                    style="width: 24px; height: 24px; font-size: 10px;">AF</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 4: En Tratamiento -->
+                <div class="kanban-column">
+                    <div class="kanban-column__header" style="border-top-color: #9333EA;">
+                        <span class="kanban-column__title">En Tratamiento</span>
+                        <span class="badge badge--neutral">0</span>
+                    </div>
+                    <div class="kanban-column__body">
+                        <!-- Empty State -->
+                        <div
+                            style="text-align: center; color: var(--color-text-light); padding: 20px; font-size: 0.85rem;">
+                            No hay leads en esta etapa
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

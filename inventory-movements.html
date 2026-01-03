@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Movimientos | SaludSync Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .badge-movement-in {
+            background-color: #DCFCE7;
+            color: #166534;
+            border: 1px solid #BBF7D0;
+        }
+
+        .badge-movement-out {
+            background-color: #FEE2E2;
+            color: #DC2626;
+            border: 1px solid #FECACA;
+        }
+
+        .badge-movement-adjust {
+            background-color: #FEF3C7;
+            color: #D97706;
+            border: 1px solid #FDE68A;
+        }
+    </style>
+</head>
+
+<body class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar__logo">
+            <span class="material-symbols-rounded sidebar__logo-icon">health_and_safety</span>
+            <h1 class="sidebar__title">SaludSync</h1>
+        </div>
+
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li class="sidebar__item">
+                    <a href="index.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">dashboard</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="agenda.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">calendar_month</span>
+                        <span>Agenda</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="patients.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">group</span>
+                        <span>Pacientes</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="cashbook.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">payments</span>
+                        <span>Caja</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="marketing.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">campaign</span>
+                        <span>Marketing</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="productivity.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">bar_chart</span>
+                        <span>Productividad</span>
+                    </a>
+                </li>
+                <li class="sidebar__item sidebar__item--active">
+                    <a href="inventory.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">inventory_2</span>
+                        <span>Inventario</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="laboratory.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">biotech</span>
+                        <span>Laboratorio</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar__footer">
+            <a href="#" class="sidebar__link">
+                <span class="material-symbols-rounded">settings</span>
+                <span>Configuración</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <h2 class="top-bar__title">Inventario</h2>
+
+            <div class="top-bar__actions">
+                <button class="btn btn--primary">
+                    <span class="material-symbols-rounded">add_circle</span>
+                    Registrar Movimiento
+                </button>
+                <div class="top-bar__profile">
+                    <img src="https://ui-avatars.com/api/?name=Dr+House&background=0D8ABC&color=fff" alt="Perfil"
+                        class="top-bar__avatar">
+                </div>
+            </div>
+        </header>
+
+        <!-- Vista de Inventario - Movimientos -->
+        <section class="section-content">
+
+            <!-- Submenús de Navegación -->
+            <nav class="sub-nav">
+                <a href="inventory.html" class="sub-nav__link">
+                    <span class="material-symbols-rounded">grid_view</span>
+                    Productos
+                </a>
+                <a href="inventory-movements.html" class="sub-nav__link sub-nav__link--active">
+                    <span class="material-symbols-rounded">swap_horiz</span>
+                    Movimientos
+                </a>
+            </nav>
+
+            <!-- KPI Cards -->
+            <div class="finance-cards">
+                <div class="finance-card">
+                    <div class="finance-card__icon finance-card__icon--success">
+                        <span class="material-symbols-rounded">login</span>
+                    </div>
+                    <div class="finance-card__info">
+                        <p class="finance-card__label">Entradas (Mes)</p>
+                        <h3 class="finance-card__value">158 U</h3>
+                        <p class="finance-card__trend text-success">Reposiciones y compras</p>
+                    </div>
+                </div>
+                <div class="finance-card">
+                    <div class="finance-card__icon finance-card__icon--danger">
+                        <span class="material-symbols-rounded">logout</span>
+                    </div>
+                    <div class="finance-card__info">
+                        <p class="finance-card__label">Salidas (Mes)</p>
+                        <h3 class="finance-card__value">142 U</h3>
+                        <p class="finance-card__trend text-neutral">Consumo y ventas</p>
+                    </div>
+                </div>
+                <div class="finance-card">
+                    <div class="finance-card__icon finance-card__icon--warning">
+                        <span class="material-symbols-rounded">tune</span>
+                    </div>
+                    <div class="finance-card__info">
+                        <p class="finance-card__label">Ajustes</p>
+                        <h3 class="finance-card__value">-2 U</h3>
+                        <p class="finance-card__trend text-danger">Mermas o vencidos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filters-bar">
+                <div class="search-input">
+                    <span class="material-symbols-rounded">search</span>
+                    <input type="text" placeholder="Buscar por producto...">
+                </div>
+                <div class="filters-actions">
+                    <button class="btn btn--outline">
+                        <span class="material-symbols-rounded">calendar_month</span>
+                        Este Mes
+                    </button>
+                    <button class="btn btn--outline">
+                        <span class="material-symbols-rounded">filter_alt</span>
+                        Tipo: Todos
+                    </button>
+                    <button class="btn btn--outline">
+                        <span class="material-symbols-rounded">download</span>
+                        Reporte
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tabla de Movimientos -->
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th class="data-table__th">Fecha / Hora</th>
+                            <th class="data-table__th">Producto</th>
+                            <th class="data-table__th text-center">Tipo</th>
+                            <th class="data-table__th text-center">Cantidad</th>
+                            <th class="data-table__th">Motivo / Ref.</th>
+                            <th class="data-table__th">Usuario</th>
+                            <th class="data-table__th text-center">Saldo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Movimiento 1 -->
+                        <tr class="data-table__row">
+                            <td class="data-table__td">
+                                <div style="display:flex; flex-direction:column;">
+                                    <span style="font-weight: 500;">03 Ene 2024</span>
+                                    <span style="font-size: 0.75rem; color: var(--color-text-light);">10:30 AM</span>
+                                </div>
+                            </td>
+                            <td class="data-table__td font-medium">Guantes Látex - Caja x100</td>
+                            <td class="data-table__td text-center">
+                                <span class="badge badge-movement-out">Salida</span>
+                            </td>
+                            <td class="data-table__td text-center font-bold text-danger">-1</td>
+                            <td class="data-table__td">Uso en Consultorio 1</td>
+                            <td class="data-table__td">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <div class="patient-avatar patient-avatar--purple"
+                                        style="width: 20px; height: 20px; font-size: 10px;">AS</div>
+                                    <span style="font-size: 0.85rem;">Asistente</span>
+                                </div>
+                            </td>
+                            <td class="data-table__td text-center">5</td>
+                        </tr>
+                        <!-- Movimiento 2 -->
+                        <tr class="data-table__row">
+                            <td class="data-table__td">
+                                <div style="display:flex; flex-direction:column;">
+                                    <span style="font-weight: 500;">02 Ene 2024</span>
+                                    <span style="font-size: 0.75rem; color: var(--color-text-light);">04:15 PM</span>
+                                </div>
+                            </td>
+                            <td class="data-table__td font-medium">Kit Blanqueamiento Zoom</td>
+                            <td class="data-table__td text-center">
+                                <span class="badge badge-movement-out">Salida</span>
+                            </td>
+                            <td class="data-table__td text-center font-bold text-danger">-1</td>
+                            <td class="data-table__td">Venta - Paciente #452</td>
+                            <td class="data-table__td">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <div class="patient-avatar patient-avatar--green"
+                                        style="width: 20px; height: 20px; font-size: 10px;">DH</div>
+                                    <span style="font-size: 0.85rem;">Dr. House</span>
+                                </div>
+                            </td>
+                            <td class="data-table__td text-center">45</td>
+                        </tr>
+                        <!-- Movimiento 3 -->
+                        <tr class="data-table__row">
+                            <td class="data-table__td">
+                                <div style="display:flex; flex-direction:column;">
+                                    <span style="font-weight: 500;">28 Dic 2023</span>
+                                    <span style="font-size: 0.75rem; color: var(--color-text-light);">09:00 AM</span>
+                                </div>
+                            </td>
+                            <td class="data-table__td font-medium">Kit Blanqueamiento Zoom</td>
+                            <td class="data-table__td text-center">
+                                <span class="badge badge-movement-in">Entrada</span>
+                            </td>
+                            <td class="data-table__td text-center font-bold text-success">+10</td>
+                            <td class="data-table__td">Compra Fact. F001-230</td>
+                            <td class="data-table__td">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <div class="patient-avatar" style="width: 20px; height: 20px; font-size: 10px;">AD
+                                    </div>
+                                    <span style="font-size: 0.85rem;">Admin</span>
+                                </div>
+                            </td>
+                            <td class="data-table__td text-center">46</td>
+                        </tr>
+                        <!-- Movimiento 4 -->
+                        <tr class="data-table__row">
+                            <td class="data-table__td">
+                                <div style="display:flex; flex-direction:column;">
+                                    <span style="font-weight: 500;">20 Dic 2023</span>
+                                    <span style="font-size: 0.75rem; color: var(--color-text-light);">11:45 AM</span>
+                                </div>
+                            </td>
+                            <td class="data-table__td font-medium">Anestesia Tópica Gel</td>
+                            <td class="data-table__td text-center">
+                                <span class="badge badge-movement-adjust">Ajuste</span>
+                            </td>
+                            <td class="data-table__td text-center font-bold text-warning">-2</td>
+                            <td class="data-table__td">Vencimiento Lote A44</td>
+                            <td class="data-table__td">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <div class="patient-avatar patient-avatar--green"
+                                        style="width: 20px; height: 20px; font-size: 10px;">DH</div>
+                                    <span style="font-size: 0.85rem;">Dr. House</span>
+                                </div>
+                            </td>
+                            <td class="data-table__td text-center">8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

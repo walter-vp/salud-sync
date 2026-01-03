@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja y Movimientos | SaludSync Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar__logo">
+            <span class="material-symbols-rounded sidebar__logo-icon">health_and_safety</span>
+            <h1 class="sidebar__title">SaludSync</h1>
+        </div>
+
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li class="sidebar__item">
+                    <a href="index.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">dashboard</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="agenda.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">calendar_month</span>
+                        <span>Agenda</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="patients.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">group</span>
+                        <span>Pacientes</span>
+                    </a>
+                </li>
+                <li class="sidebar__item sidebar__item--active">
+                    <a href="cashbook.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">payments</span>
+                        <span>Caja</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="marketing.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">campaign</span>
+                        <span>Marketing</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="productivity.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">bar_chart</span>
+                        <span>Productividad</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="inventory.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">inventory_2</span>
+                        <span>Inventario</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="laboratory.html" class="sidebar__link">
+                        <span class="material-symbols-rounded">biotech</span>
+                        <span>Laboratorio</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar__footer">
+            <a href="#" class="sidebar__link">
+                <span class="material-symbols-rounded">settings</span>
+                <span>Configuración</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <h2 class="top-bar__title">Control de Caja</h2>
+
+            <div class="top-bar__actions">
+                <button class="btn btn--primary">
+                    <span class="material-symbols-rounded">add</span>
+                    Nuevo Ingreso
+                </button>
+                <div class="top-bar__profile">
+                    <img src="https://ui-avatars.com/api/?name=Dr+House&background=0D8ABC&color=fff" alt="Perfil"
+                        class="top-bar__avatar">
+                </div>
+            </div>
+        </header>
+
+        <!-- Vista de Caja -->
+        <section class="section-content">
+
+            <!-- Submenús de Navegación -->
+            <nav class="sub-nav">
+                <a href="cashbook.html" class="sub-nav__link sub-nav__link--active">
+                    <span class="material-symbols-rounded">account_balance_wallet</span>
+                    Ingresos y Egresos
+                </a>
+                <a href="commissions.html" class="sub-nav__link">
+                    <span class="material-symbols-rounded">percent</span>
+                    Comisiones
+                </a>
+                <a href="payment-links.html" class="sub-nav__link">
+                    <span class="material-symbols-rounded">link</span>
+                    Links de Pago
+                </a>
+            </nav>
+
+            <!-- Tarjetas de Resumen Financiero -->
+            <div class="finance-cards">
+                <!-- Card 1: Ingresos Totales -->
+                <div class="finance-card">
+                    <div class="finance-card__icon finance-card__icon--success">
+                        <span class="material-symbols-rounded">trending_up</span>
+                    </div>
+                    <div class="finance-card__info">
+                        <p class="finance-card__label">Ingresos del Mes</p>
+                        <h3 class="finance-card__value">S/ 12,450.00</h3>
+                        <p class="finance-card__trend text-success">
+                            <span class="material-symbols-rounded">arrow_upward</span> +15% vs mes anterior
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Egresos -->
+                <div class="finance-card">
+                    <div class="finance-card__icon finance-card__icon--danger">
+                        <span class="material-symbols-rounded">trending_down</span>
+                    </div>
+                    <div class="finance-card__info">
+                        <p class="finance-card__label">Gastos Operativos</p>
+                        <h3 class="finance-card__value">S/ 2,100.00</h3>
+                        <p class="finance-card__trend text-neutral">
+                            <span class="material-symbols-rounded">remove</span> Estable
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Balance -->
+                <div class="finance-card finance-card--highlight">
+                    <div class="finance-card__icon finance-card__icon--primary">
+                        <span class="material-symbols-rounded">account_balance_wallet</span>
+                    </div>
+                    <div class="finance-card__info">
+                        <p class="finance-card__label">Balance Neto</p>
+                        <h3 class="finance-card__value">S/ 10,350.00</h3>
+                        <p class="finance-card__trend text-success">Rentable</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filters-bar">
+                <div class="search-input">
+                    <span class="material-symbols-rounded">search</span>
+                    <input type="text" placeholder="Buscar movimiento...">
+                </div>
+                <!-- Filtro de Fechas Simulado -->
+                <div class="date-filter">
+                    <span class="material-symbols-rounded">calendar_today</span>
+                    <span>Enero 2026</span>
+                </div>
+                <div class="filters-actions">
+                    <button class="btn btn--outline">
+                        <span class="material-symbols-rounded">filter_list</span>
+                        Tipo
+                    </button>
+                    <button class="btn btn--outline">
+                        <span class="material-symbols-rounded">download</span>
+                        Reporte
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tabla de Movimientos -->
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th class="data-table__th">Fecha</th>
+                            <th class="data-table__th">Descripción</th>
+                            <th class="data-table__th">Paciente / Entidad</th>
+                            <th class="data-table__th">Método</th>
+                            <th class="data-table__th">Monto</th>
+                            <th class="data-table__th">Estado</th>
+                            <th class="data-table__th"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row 1 -->
+                        <tr class="data-table__row">
+                            <td class="data-table__td">
+                                <div class="date-cell">
+                                    <span class="date-cell__day">29</span>
+                                    <span class="date-cell__month">Ene</span>
+                                </div>
+                            </td>
+                            <td class="data-table__td">
+                                <div class="tx-desc">Consulta General</div>
+                                <div class="tx-id">#TX-8821</div>
+                            </td>
+                            <td class="data-table__td">Juan Pérez</td>
+                            <td class="data-table__td"><span class="badge badge--neutral">Efectivo</span></td>
+                            <td class="data-table__td text-success font-bold">+ S/ 150.00</td>
+                            <td class="data-table__td"><span class="badge badge--success">Pagado</span></td>
+                            <td class="data-table__td">
+                                <button class="btn-icon-sm"><span
+                                        class="material-symbols-rounded">more_vert</span></button>
+                            </td>
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr class="data-table__row">
+                            <td class="data-table__td">
+                                <div class="date-cell">
+                                    <span class="date-cell__day">29</span>
+                                    <span class="date-cell__month">Ene</span>
+                                </div>
+                            </td>
+                            <td class="data-table__td">
+                                <div class="tx-desc">Tratamiento Dental</div>
+                                <div class="tx-id">#TX-8822</div>
+                            </td>
+                            <td class="data-table__td">Ana María López</td>
+                            <td class="data-table__td"><span class="badge badge--neutral">Tarjeta</span></td>
+                            <td class="data-table__td text-success font-bold">+ S/ 450.00</td>
+                            <td class="data-table__td"><span class="badge badge--success">Pagado</span></td>
+                            <td class="data-table__td">
+                                <button class="btn-icon-sm"><span
+                                        class="material-symbols-rounded">more_vert</span></button>
+                            </td>
+                        </tr>
+                        <!-- Row 3: Egreso -->
+                        <tr class="data-table__row">
+                            <td class="data-table__td">
+                                <div class="date-cell">
+                                    <span class="date-cell__day">28</span>
+                                    <span class="date-cell__month">Ene</span>
+                                </div>
+                            </td>
+                            <td class="data-table__td">
+                                <div class="tx-desc">Compra Insumos</div>
+                                <div class="tx-id">#EXP-004</div>
+                            </td>
+                            <td class="data-table__td">Proveedor Médico SAC</td>
+                            <td class="data-table__td"><span class="badge badge--neutral">Transferencia</span></td>
+                            <td class="data-table__td text-danger font-bold">- S/ 1,200.00</td>
+                            <td class="data-table__td"><span class="badge badge--warning">Procesado</span></td>
+                            <td class="data-table__td">
+                                <button class="btn-icon-sm"><span
+                                        class="material-symbols-rounded">more_vert</span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>
