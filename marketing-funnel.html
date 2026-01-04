@@ -16,74 +16,8 @@
 <body class="layout">
 
     <!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="sidebar__logo">
-            <span class="material-symbols-rounded sidebar__logo-icon">health_and_safety</span>
-            <h1 class="sidebar__title">SaludSync</h1>
-        </div>
-
-        <nav class="sidebar__nav">
-            <ul class="sidebar__menu">
-                <li class="sidebar__item">
-                    <a href="index.html" class="sidebar__link">
-                        <span class="material-symbols-rounded">dashboard</span>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li class="sidebar__item">
-                    <a href="agenda.html" class="sidebar__link">
-                        <span class="material-symbols-rounded">calendar_month</span>
-                        <span>Agenda</span>
-                    </a>
-                </li>
-                <li class="sidebar__item">
-                    <a href="patients.html" class="sidebar__link">
-                        <span class="material-symbols-rounded">group</span>
-                        <span>Pacientes</span>
-                    </a>
-                </li>
-                <li class="sidebar__item">
-                    <a href="cashbook.html" class="sidebar__link">
-                        <span class="material-symbols-rounded">payments</span>
-                        <span>Caja</span>
-                    </a>
-                </li>
-                <li class="sidebar__item sidebar__item--active">
-                    <a href="marketing.html" class="sidebar__link">
-                        <span class="material-symbols-rounded">campaign</span>
-                        <span>Marketing</span>
-                    </a>
-                </li>
-                <li class="sidebar__item">
-                    <a href="productivity.html" class="sidebar__link">
-                        <span class="material-symbols-rounded">bar_chart</span>
-                        <span>Productividad</span>
-                    </a>
-                </li>
-                <li class="sidebar__item">
-                    <a href="inventory.html" class="sidebar__link">
-                        <span class="material-symbols-rounded">inventory_2</span>
-                        <span>Inventario</span>
-                    </a>
-                </li>
-                <li class="sidebar__item">
-                    <a href="laboratory.html" class="sidebar__link">
-                        <span class="material-symbols-rounded">biotech</span>
-                        <span>Laboratorio</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        </ul>
-        </nav>
-
-        <div class="sidebar__footer">
-            <a href="#" class="sidebar__link">
-                <span class="material-symbols-rounded">settings</span>
-                <span>Configuración</span>
-            </a>
-        </div>
-    </aside>
+        <!-- Sidebar Container (Dynamic) -->
+    <aside class="sidebar" id="sidebar-container"></aside>
 
     <!-- Contenido Principal -->
     <main class="main-content">
@@ -294,6 +228,14 @@
 
         </section>
     </main>
+    <script src="assets/js/components/Sidebar.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = new SidebarComponent('#sidebar-container');
+            sidebar.render();
+        });
+    </script>
 </body>
 
 </html>
